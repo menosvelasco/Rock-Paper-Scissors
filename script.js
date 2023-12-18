@@ -18,9 +18,9 @@ function playerSelection() {
     playerWordCaseInsen.charAt(0).toUpperCase() + playerWordCaseInsen.slice(1)
   );
 
-  /*
-		Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation)
-	*/
+  //   /*
+  // 		Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation)
+  // 	*/
 }
 console.log(playerSelection());
 
