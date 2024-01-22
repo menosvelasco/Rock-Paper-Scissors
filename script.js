@@ -23,20 +23,17 @@ const computerSelection = getComputerChoice();
 
 // declares the winner of the round using a string
 function playRound(playerSelection, computerSelection) {
-  if (
-    (playerSelection === 'Paper') === computerSelection ||
-    (playerSelection === 'Rock') === computerSelection ||
-    (playerSelection === 'Scissors') === computerSelection
-  ) {
+  // object storing who is beating, who
+  let beatChoice = { Rock: 'Scissors', Scissors: 'Paper', Paper: 'Rock' };
+
+  if (computerSelection === beatChoice[playerSelection]) {
     return `you win, ${playerSelection} beats ${computerSelection}`;
-  } else if (
-    (computerSelection === 'Paper') === playerSelection ||
-    (computerSelection === 'Rock') === playerSelection ||
-    (computerSelection === 'Scissors') === playerSelection
-  ) {
+  } else if (playerSelection === beatChoice[computerSelection]) {
     return `you lose ${computerSelection} beats ${playerSelection}`;
-  } else if (playerSelection === computerSelection) {
+  } else if (computerSelection === playerSelection) {
     return `draw`;
+  } else {
+    return `You must input Rock, Paper, or Scissors`;
   }
 }
 
@@ -44,6 +41,10 @@ function playRound(playerSelection, computerSelection) {
 //
 //
 //
+console.log(playRound(playerSelection(), computerSelection));
+console.log(playRound(playerSelection(), computerSelection));
+console.log(playRound(playerSelection(), computerSelection));
+console.log(playRound(playerSelection(), computerSelection));
 console.log(playRound(playerSelection(), computerSelection));
 
 // best-of-five game that keeps score and reports a winner or loser at the end.
