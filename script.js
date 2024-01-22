@@ -21,7 +21,7 @@ const computerSelection = getComputerChoice();
 //
 //
 
-// declares the winner of the round using a string
+// declares the winner of the round
 function playRound(playerSelection, computerSelection) {
   // object storing who is beating, who
   let beatChoice = { Rock: 'Scissors', Scissors: 'Paper', Paper: 'Rock' };
